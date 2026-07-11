@@ -1,0 +1,32 @@
+[
+  {
+    "id": "aurelia-showroom",
+    "title": "Aurelia Digital Showroom",
+    "subtitle": "Interactive digital gallery for high-end luxury real estate properties.",
+    "category": "Architectural UI",
+    "tags": ["React", "Tailwind CSS", "TypeScript", "Vite"],
+    "imageUrl": "/assets/projects/aurelia.webp",
+    "description": "An immersive luxury digital showroom presenting architectural blueprints and high-fidelity rendering details. Designed to mimic a premium physical art gallery, this application features brushed gold transition borders, interactive details cards, and responsive container scaling.",
+    "deliverables": [
+      "Sub-1.2s page interaction speeds through asset lazy-loading",
+      "Interactive structural model presentation using SVG layering",
+      "Fluid cross-viewport adaptability from 320px up to 4K resolutions"
+    ],
+    "projectUrl": "https://aurelia.luxuryui.dev"
+  },
+  {
+    "id": "lumina-metrics",
+    "title": "Lumina Analytics Suite",
+    "subtitle": "Real-time performance and loading statistics dashboard.",
+    "category": "Data Visualization",
+    "tags": ["TypeScript", "SVG Graphs", "Performance", "CSS Grids"],
+    "imageUrl": "/assets/projects/lumina.webp",
+    "description": "A dashboard displaying critical web runtime performance metrics. Built with absolute focus on raw loading performance and clean, decoupled data-components, the suite renders real-time rendering statistics, asset load budgets, and server-side connection speeds with custom SVG timelines.",
+    "deliverables": [
+      "Responsive 60 FPS charts drawn with custom React vector logic",
+      "Lightweight bundle footprint under 25KB total transfer size",
+      "Robust data fallbacks resolving network disconnect scenarios"
+    ],
+    "projectUrl": "https://lumina.luxuryui.dev"
+  }
+]
