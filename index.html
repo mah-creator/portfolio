@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineering Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Smooth transition for modal */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
+        body.modal-active {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-950">
+
+    <header class="relative overflow-hidden bg-slate-950 py-24 border-b border-slate-800">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(16,185,129,0.08),transparent_50%)]"></div>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <span class="text-emerald-400 font-mono tracking-wider uppercase text-sm block mb-3">// Project Archive</span>
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight text-white mb-4">
+                Engineering Portfolio
+            </h1>
+            <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+                A curated gallery of systems, architectures, and applications I've designed and built. Filter by technology stack below.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        
+        <div class="sticky top-0 z-40 bg-slate-900/80 backdrop-blur-md py-4 mb-12 border-b border-slate-800/50">
+            <div class="flex flex-wrap items-center gap-2" id="filter-buttons">
+                <button onclick="filterProjects('all')" class="filter-btn active px-4 py-2 rounded-lg text-sm font-medium transition bg-emerald-500 text-slate-950 hover:bg-emerald-400" data-filter="all">
+                    All Projects
+                </button>
+                <button onclick="filterProjects('backend')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium transition bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white" data-filter="backend">Backend/Infra</button>
+                <button onclick="filterProjects('frontend')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium transition bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white" data-filter="frontend">Frontend/Apps</button>
+                <button onclick="filterProjects('fullstack')" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium transition bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white" data-filter="fullstack">Full-Stack</button>
+            </div>
+        </div>
+
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="project-card group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-slate-700 shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col" data-category="backend">
+                <div class="relative overflow-hidden aspect-video bg-slate-900 cursor-pointer" onclick="openModal('project-1')">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Distributed Task Queue" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+                    <div class="absolute bottom-3 left-3 bg-slate-900/90 text-emerald-400 font-mono text-xs px-2.5 py-1 rounded border border-slate-700">
+                        Backend
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition cursor-pointer" onclick="openModal('project-1')">
+                            Distributed Task Queue
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2">
+                            A high-throughput, horizontally scalable background worker system optimized for low latency job processing.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="bg-slate-900 text-slate-400 text-xs px-2 py-0.5 rounded font-mono">Go</span>
+                            <span class="bg-slate-900 text-slate-400 text-xs px-2 py-0.5 rounded font-mono">Redis</span>
+                            <span class="bg-slate-900 text-slate-400 text-xs px-2 py-0.5 rounded font-mono">Docker</span>
+                        </div>
+                        <button onclick="openModal('project-1')" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-sm py-2 px-4 rounded-lg border border-slate-800 transition flex items-center justify-center gap-2">
+                            View Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card group bg-slate-950 rounded-xl overflow-hidden border border-slate-800 hover:border-slate-700 shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col" data-category="frontend">
+                <div class="relative overflow-hidden aspect-video bg-slate-900 cursor-pointer" onclick="openModal('project-2')">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Real-time Metrics Dashboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+                    <div class="absolute bottom-3 left-3 bg-slate-900/90 text-emerald-400 font-mono text-xs px-2.5 py-1 rounded border border-slate-700">
+                        Frontend
+                    </div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition cursor-pointer" onclick="openModal('project-2')">
+                            Real-time Analytics UI
+                        </h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2">
+                            Interactive data visualization suite streaming WebSocket server metrics with sub-100ms UI rendering pipelines.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-1.5 mb-4">
+                            <span class="bg-slate-900 text-slate-400 text-xs px-2 py-0.5 rounded font-mono">React</span>
+                            <span class="bg-slate-900 text-slate-400 text-xs px-2 py-0.5 rounded font-mono">D3.js</span>
+                            <span class="bg-slate-900 text-slate-400 text-xs px-2 py-0.5 rounded font-mono">WebSockets</span>
+                        </div>
+                        <button onclick="openModal('project-2')" class="w-full bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-sm py-2 px-4 rounded-lg border border-slate-800 transition flex items-center justify-center gap-2">
+                            View Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="project-modal" class="modal fixed inset-0 z-50 opacity-0 pointer-events-none display-none overflow-y-auto bg-slate-950/80 backdrop-blur-lg flex items-center justify-center p-4 md:p-6">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-4xl rounded-2xl max-h-[90vh] overflow-y-auto shadow-2xl relative" onclick="event.stopPropagation()">
+            
+            <div class="sticky top-0 bg-slate-900/90 backdrop-blur border-b border-slate-800 px-6 py-4 flex justify-between items-center z-10">
+                <h2 id="modal-title" class="text-xl font-bold text-white">Project Details</h2>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white p-2 rounded-lg hover:bg-slate-800 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="p-6 md:p-8">
+                <div id="modal-screenshots" class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-slate-950 p-4 rounded-xl border border-slate-800 mb-6 font-mono text-xs">
+                    <div>
+                        <span class="text-slate-500 block mb-1">ROLE</span>
+                        <span id="modal-role" class="text-slate-200">Lead Engineer</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-500 block mb-1">TIMELINE</span>
+                        <span id="modal-timeline" class="text-slate-200">3 Months</span>
+                    </div>
+                    <div>
+                        <span class="text-slate-500 block mb-1">REPOSITORY</span>
+                        <a id="modal-repo" href="#" target="_blank" class="text-emerald-400 hover:underline">GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                    </div>
+                    <div>
+                        <span class="text-slate-500 block mb-1">ENVIRONMENT</span>
+                        <span id="modal-env" class="text-slate-200">AWS / Production</span>
+                    </div>
+                </div>
+
+                <div class="prose prose-invert max-w-none">
+                    <h4 class="text-emerald-400 font-mono text-sm uppercase tracking-wider mb-2">// Project Architecture & Impact</h4>
+                    <p id="modal-description" class="text-slate-300 text-base leading-relaxed mb-6"></p>
+                    
+                    <h4 class="text-emerald-400 font-mono text-sm uppercase tracking-wider mb-2">// Key Achievements</h4>
+                    <ul id="modal-achievements" class="list-disc pl-5 space-y-2 text-slate-300 text-sm">
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DATA REPOSITORY: Paste your data configurations here later
+        const database = {
+            'project-1': {
+                title: 'Distributed Task Queue',
+                category: 'backend',
+                role: 'Backend Architect',
+                timeline: 'Q2 2025',
+                repo: 'https://github.com',
+                env: 'AWS ECS / Redis Cloud',
+                description: 'Designed a highly available task processor capable of scheduling, executing, and retrying asynchronous workloads. Addressed major split-brain hazards and optimized memory usage patterns across distributed cluster nodes.',
+                achievements: [
+                    'Sustained continuous throughput of over 25,000 requests per second.',
+                    'Reduced P99 task latency profiles by 40% using connection-pooling mechanisms.',
+                    'Implemented exponential backoff logic with custom failure-dlq handling routines.'
+                ],
+                screenshots: [
+                    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80'
+                ]
+            },
+            'project-2': {
+                title: 'Real-time Analytics UI',
+                category: 'frontend',
+                role: 'Frontend Engineer',
+                timeline: '4 Weeks',
+                repo: 'https://github.com',
+                env: 'Cloudflare Pages / Vercel',
+                description: 'Engineered a highly reactive telemetry web dashboard client. This application displays streaming structural node analytics, using hardware-accelerated canvas components to maintain zero interface stutter during heavy network loads.',
+                achievements: [
+                    'Eliminated UI thread blocking completely using OffscreenCanvas workers.',
+                    'Maintained a responsive, smooth 60fps data paint cycle despite receiving 100+ active JSON payloads per second.',
+                    'Integrated real-time threshold alert toasts using resilient native browser notification configurations.'
+                ],
+                screenshots: [
+                    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+                    'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
+                ]
+            }
+        };
+
+        // UI Interactions
+        function filterProjects(category) {
+            // Manage Active Filter Styles
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if(btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('bg-emerald-500', 'text-slate-950');
+                    btn.classList.remove('bg-slate-800', 'text-slate-300');
+                } else {
+                    btn.classList.remove('bg-emerald-500', 'text-slate-950');
+                    btn.classList.add('bg-slate-800', 'text-slate-300');
+                }
+            });
+
+            // Grid Items Visibility Filter Toggle
+            document.querySelectorAll('.project-card').forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function openModal(id) {
+            const data = database[id];
+            if (!data) return;
+
+            // Mapping Text Attributes
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-role').innerText = data.role;
+            document.getElementById('modal-timeline').innerText = data.timeline;
+            document.getElementById('modal-env').innerText = data.env;
+            document.getElementById('modal-repo').href = data.repo;
+            document.getElementById('modal-description').innerText = data.description;
+
+            // Hydrate Screenshots
+            const gallery = document.getElementById('modal-screenshots');
+            gallery.innerHTML = '';
+            data.screenshots.forEach(src => {
+                gallery.innerHTML += `<img src="${src}" alt="Screenshot" class="w-full rounded-lg border border-slate-800 object-cover aspect-video bg-slate-950">`;
+            });
+
+            // Hydrate Bullet Points
+            const achievementsList = document.getElementById('modal-achievements');
+            achievementsList.innerHTML = '';
+            data.achievements.forEach(item => {
+                achievementsList.innerHTML += `<li>${item}</li>`;
+            });
+
+            // Trigger Display Animations smoothly
+            const modal = document.getElementById('project-modal');
+            modal.classList.remove('pointer-events-none');
+            modal.classList.add('opacity-100');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('pointer-events-none');
+            modal.classList.remove('opacity-100');
+            document.body.classList.remove('modal-active');
+        }
+
+        // Close via clicking background backdrop
+        document.getElementById('project-modal').addEventListener('click', closeModal);
+    </script>
+</body>
+</html>
