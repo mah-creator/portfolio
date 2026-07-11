@@ -1,5 +1,5 @@
 import React from 'react'
-import { Project } from '../models/types'
+import type { Project } from '../models/types'
 import { X, CheckCircle, ExternalLink } from 'lucide-react'
 
 interface ProjectModalProps {
