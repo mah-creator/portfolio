@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Hero } from './components/Hero'
 import { ProjectShowcase } from './components/ProjectShowcase'
 import { ProjectModal } from './components/ProjectModal'
+import { Timeline } from './components/Timeline'
+import { SkillsGrid } from './components/SkillsGrid'
 import { Project } from './models/types'
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
       <div>
         <Hero />
         <ProjectShowcase onSelectProject={setSelectedProject} />
+        <Timeline />
+        <SkillsGrid />
       </div>
 
       <ProjectModal
