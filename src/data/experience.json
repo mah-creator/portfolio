@@ -1,0 +1,26 @@
+[
+  {
+    "id": "exp-architect",
+    "company": "Vanguard Luxury Digital",
+    "role": "Lead Interface Architect",
+    "location": "Remote / New York",
+    "period": "Oct 2024 - Present",
+    "achievements": [
+      "Designed dynamic luxury showroom platform increasing user session lengths by 40%",
+      "Established strict performance budgets, lowering average bundle size by 35%",
+      "Developed modular parsing utilities decoupling React presentation from JSON data content"
+    ]
+  },
+  {
+    "id": "exp-senior",
+    "company": "Aura Design Agency",
+    "role": "Senior Frontend Developer",
+    "location": "London, UK",
+    "period": "Mar 2022 - Sep 2024",
+    "achievements": [
+      "Constructed client web portals supporting 10,000+ weekly active luxury catalog users",
+      "Engineered reusable animation components lowering styling overhead by 20%",
+      "Mentored junior engineers in implementing high-fidelity mobile-first responsive layouts"
+    ]
+  }
+]
