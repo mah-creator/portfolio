@@ -37,6 +37,18 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </button>
         </div>
 
+        {/* Project Image */}
+        {project.imageUrl && (
+          <div className="w-full h-64 overflow-hidden rounded border border-slate-800 mb-6 bg-slate-950">
+            <img
+              src={project.imageUrl}
+              alt={project.title}
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+            />
+          </div>
+        )}
+
         {/* Description */}
         <div className="mb-8">
           <h4 className="text-xs uppercase tracking-[0.2em] text-slate-500 font-semibold mb-3 font-sans">
