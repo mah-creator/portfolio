@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Interface Development",
+    "items": [
+      { "name": "React.js", "level": 95 },
+      { "name": "TypeScript", "level": 90 },
+      { "name": "HTML5 / Canvas", "level": 85 }
+    ]
+  },
+  {
+    "category": "Visuals & Design",
+    "items": [
+      { "name": "Tailwind CSS", "level": 95 },
+      { "name": "Luxury Typography", "level": 90 },
+      { "name": "Motion & Animation", "level": 85 }
+    ]
+  },
+  {
+    "category": "Engineering & Ops",
+    "items": [
+      { "name": "Static Web Hosting", "level": 90 },
+      { "name": "Performance Budgets", "level": 95 },
+      { "name": "Unit Testing", "level": 85 }
+    ]
+  }
+]
