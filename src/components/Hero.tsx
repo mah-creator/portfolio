@@ -1,6 +1,6 @@
 import React from 'react'
 import profileData from '../data/profile.json'
-import { Profile } from '../models/types'
+import type { Profile } from '../models/types'
 import { Github, Linkedin, Mail, FileText } from 'lucide-react'
 
 export const Hero: React.FC = () => {
