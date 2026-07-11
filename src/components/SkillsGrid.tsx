@@ -1,6 +1,6 @@
 import React from 'react'
 import skillsData from '../data/skills.json'
-import { SkillGroup } from '../models/types'
+import type { SkillGroup } from '../models/types'
 
 export const SkillsGrid: React.FC = () => {
   const skillGroups: SkillGroup[] = skillsData
