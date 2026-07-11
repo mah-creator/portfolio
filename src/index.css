@@ -26,8 +26,9 @@
 
 /* Custom premium visual elements */
 .gold-gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-brushed via-gold-warm to-gold-brushed animate-shine;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-brushed via-gold-warm to-gold-brushed;
   background-size: 300% auto;
+  animation: shine 8s ease infinite;
 }
 
 .gold-glow-hover {
