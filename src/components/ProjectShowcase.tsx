@@ -1,6 +1,6 @@
 import React from 'react'
 import projectsData from '../data/projects.json'
-import { Project } from '../models/types'
+import type { Project } from '../models/types'
 import { ProjectCard } from './ProjectCard'
 
 interface ProjectShowcaseProps {
