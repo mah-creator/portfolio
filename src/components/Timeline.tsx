@@ -1,6 +1,6 @@
 import React from 'react'
 import experienceData from '../data/experience.json'
-import { Experience } from '../models/types'
+import type { Experience } from '../models/types'
 import { Briefcase } from 'lucide-react'
 
 export const Timeline: React.FC = () => {
