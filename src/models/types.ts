@@ -15,7 +15,7 @@ export interface Project {
   subtitle: string;
   category: string;
   tags: string[];
-  imageUrl: string;
+  images: string[];
   description: string;
   deliverables: string[];
   projectUrl?: string;

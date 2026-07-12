@@ -24,19 +24,23 @@ This contract defines the schema and file names for the static JSON content that
 ```json
 [
   {
-    "id": "luxury-real-estate",
-    "title": "Aurelia Residences Showcase",
-    "subtitle": "High-end luxury real estate presentation portal",
-    "category": "Architectural UI",
-    "tags": ["React", "Tailwind CSS", "Vite"],
-    "imageUrl": "/assets/projects/aurelia.webp",
-    "description": "An interactive digital showroom built for a top-tier luxury property developer. The project highlights architectural renderings using high-contrast slate layouts and brushed gold borders.",
-    "deliverables": [
-      "Sub-2s page load speed via lazy loading off-screen assets",
-      "Interactive 3D model viewport integrations",
-      "Perfect Lighthouse responsiveness score"
+    "id": "agileflow",
+    "title": "TaskMind",
+    "subtitle": "AI-powered Agile planning and collaborative task management platform.",
+    "category": "AI Productivity",
+    "tags": ["Laravel 13", "PHP 8.4", "laravel/ai SDK", "Alpine.js", "Tailwind CSS v4"],
+    "images": [
+      "/projects/agileflow/agent_in_action.png",
+      "/projects/agileflow/agent_response_review.png",
+      "/projects/agileflow/sprint_tasks.png"
     ],
-    "projectUrl": "https://example.com/aurelia"
+    "description": "TaskMind is a high-performance productivity tool bridging traditional Agile workflows (Sprints, Story Points, checklists) with agentic AI planning. Users converse with a database-backed AI agent that generates a structured Agile roadmap (JSON schema), which can then be committed directly to the database in a single transaction.",
+    "deliverables": [
+      "Structured AI output using laravel/ai JsonSchema contracts",
+      "Fractional story point burndown charts with Alpine.js & Chart.js",
+      "Passwordless WebAuthn (Passkeys) and 2FA authentication flows"
+    ],
+    "projectUrl": "https://github.com/yourusername/taskmind"
   }
 ]
 ```

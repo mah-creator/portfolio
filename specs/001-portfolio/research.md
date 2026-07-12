@@ -30,3 +30,11 @@
 - **Rationale**: Keeps the runtime bundle size small and ensures smooth GPU-accelerated transitions. Hover scaling, card highlights, and layout fade-ins can all be achieved using simple CSS animations.
 - **Alternatives considered**:
   - *Framer Motion*: Rejected. While powerful, it introduces external runtime scripts (~30KB gzipped) which goes against strict asset optimization guidelines when simple CSS animations can satisfy the showcase aesthetic.
+
+## Decision 5: Custom Sliding Gallery (Carousel) Component
+
+- **Decision**: A custom-built React Carousel component using CSS transitions (`duration-300`, `ease-out`) and state tracking.
+- **Rationale**: Keeps the bundle size small, respects the strict performance guidelines (Principle V), avoids loading heavy third-party carousel libraries, and styling is managed completely via Tailwind CSS (Principle I & II). By calling `event.stopPropagation()` on arrow click events, we prevent the details modal from opening when the user simply wants to cycle through images.
+- **Alternatives considered**:
+  - *Swiper.js / Embla Carousel*: Rejected. They add external JS/CSS dependencies and complexity, which goes against our self-contained static site architecture and lightweight bundle goals.
+  - *CSS-only Scroll Snapping*: Rejected. Manual buttons (left/right navigation) and custom dot indicators are required for a luxury interactive experience, which is easier to control and maintain programmatically in React state.

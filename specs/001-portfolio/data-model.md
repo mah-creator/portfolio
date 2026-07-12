@@ -35,20 +35,20 @@ Represents individual portfolio showcase items.
 interface Project {
   id: string;            // Unique alphanumeric identifier (e.g., "project-001")
   title: string;         // Project name
-  subtitle: string;      // Brief, high-level summary (shown in card hover)
-  category: string;      // Categorization (e.g., "Architectural UI", "WASM Compilers")
-  tags: string[];        // Array of technical tags (e.g., ["React", "Rust", "WebAssembly"])
-  imageUrl: string;      // Path to optimized showcase thumbnail (WebP/SVG)
+  subtitle: string;      // Brief, high-level summary
+  category: string;      // Categorization (e.g., "AI Productivity", "Backend API")
+  tags: string[];        // Array of technical tags (e.g., ["Laravel", "React", "TypeScript"])
+  images: string[];      // Array of local paths to project snapshots (stored in public/projects/)
   description: string;   // Full multi-paragraph project description
-  deliverables: string[];// List of concrete deliverables (e.g., ["30% build size reduction", "60 FPS rendering"])
-  projectUrl?: string;   // Optional link to live project or source code
+  deliverables: string[];// List of concrete deliverables (e.g., ["AI resume parsing logic", "SignalR Hub push notifications"])
+  projectUrl?: string;   // Optional link to live project or source code repository
 }
 ```
 
 **Validation Rules**:
 - `id` must be unique across all projects.
 - `tags` array must contain at least 1 and no more than 8 elements.
-- `imageUrl` must resolve to a valid path under the `/public` assets directory.
+- `images` array must contain at least 1 image and all paths must resolve to valid paths under the `/public/projects` directory.
 
 ---
 

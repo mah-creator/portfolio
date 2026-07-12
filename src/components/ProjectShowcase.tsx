@@ -4,7 +4,7 @@ import type { Project } from '../models/types'
 import { ProjectCard } from './ProjectCard'
 
 interface ProjectShowcaseProps {
-  onSelectProject: (project: Project) => void;
+  onSelectProject: (project: Project, initialSlideIndex: number) => void;
 }
 
 export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ onSelectProject }) => {
@@ -31,7 +31,7 @@ export const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({ onSelectProjec
           <ProjectCard
             key={project.id}
             project={project}
-            onClick={() => onSelectProject(project)}
+            onClick={(activeIndex) => onSelectProject(project, activeIndex)}
           />
         ))}
       </div>

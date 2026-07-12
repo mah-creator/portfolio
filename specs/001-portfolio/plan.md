@@ -6,7 +6,7 @@
 
 ## Summary
 
-Build a high-fidelity, luxury portfolio website as a static React application using Tailwind CSS. The interface will feature a dark obsidian/slate color palette paired with brushed gold accents, geometric typography (Outfit & Inter), and interactive micro-animations. Dynamic content—biography, project showcase cards, work history timeline, and skills metrics—will be dynamically parsed from structured local JSON data stores rather than hardcoded.
+Build a high-fidelity, luxury portfolio website as a static React application using Tailwind CSS. The interface will feature a dark obsidian/slate color palette paired with brushed gold accents, geometric typography (Outfit & Inter), and interactive micro-animations. Dynamic content—biography, 5 detailed showcase projects, work history timeline, and skills metrics—will be dynamically parsed from structured local JSON data stores. The project cards will contain an interactive sliding gallery (carousel) displaying a series of snapshots of each project, allowing users to scroll through images directly on the card or view them inside a details modal overlay.
 
 ## Technical Context
 
@@ -14,7 +14,7 @@ Build a high-fidelity, luxury portfolio website as a static React application us
 
 **Primary Dependencies**: React 18, Tailwind CSS, Lucide React (icons), Vite (build/HMR)
 
-**Storage**: Local static JSON files (`src/data/`)
+**Storage**: Local static JSON files (`src/data/`), local public assets (`public/projects/` containing project snapshots)
 
 **Testing**: Vitest, React Testing Library
 
@@ -24,9 +24,9 @@ Build a high-fidelity, luxury portfolio website as a static React application us
 
 **Performance Goals**: Page interactive in < 1.5s on simulated 3G network; Lighthouse performance score >= 90.
 
-**Constraints**: Pure client-side runtime, utility-first styling via Tailwind, zero-error production build, fully responsive down to 320px screen width.
+**Constraints**: Pure client-side runtime, utility-first styling via Tailwind, zero-error production build, fully responsive down to 320px screen width. Custom lightweight React carousel for sliding galleries to avoid heavy third-party carousel libraries.
 
-**Scale/Scope**: 1 Landing Page layout, 5 modular component views, 4 local data files.
+**Scale/Scope**: 1 Landing Page layout, 5 modular component views, 4 local data files, 5 distinct projects (TaskMind, HealthcareBookings, ClientPortal, WriteAI, Shaghal) containing up to 10 snapshots each.
 
 ## Constitution Check
 

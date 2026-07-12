@@ -1,32 +1,110 @@
 [
   {
-    "id": "aurelia-showroom",
-    "title": "Aurelia Digital Showroom",
-    "subtitle": "Interactive digital gallery for high-end luxury real estate properties.",
-    "category": "Architectural UI",
-    "tags": ["React", "Tailwind CSS", "TypeScript", "Vite"],
-    "imageUrl": "/assets/projects/aurelia.webp",
-    "description": "An immersive luxury digital showroom presenting architectural blueprints and high-fidelity rendering details. Designed to mimic a premium physical art gallery, this application features brushed gold transition borders, interactive details cards, and responsive container scaling.",
-    "deliverables": [
-      "Sub-1.2s page interaction speeds through asset lazy-loading",
-      "Interactive structural model presentation using SVG layering",
-      "Fluid cross-viewport adaptability from 320px up to 4K resolutions"
+    "id": "agileflow",
+    "title": "TaskMind",
+    "subtitle": "AI-powered Agile productivity tool and collaborative task management planner.",
+    "category": "AI Productivity",
+    "tags": ["Laravel 13", "PHP 8.4", "laravel/ai SDK", "Alpine.js", "Tailwind CSS v4", "Chart.js"],
+    "images": [
+      "/projects/agileflow/agent_in_action.png",
+      "/projects/agileflow/agent_response_review.png",
+      "/projects/agileflow/sprint_tasks.png"
     ],
-    "projectUrl": "https://aurelia.luxuryui.dev"
+    "description": "TaskMind is a high-performance productivity tool bridging traditional Agile workflows (Sprints, Story Points, checklists) with agentic AI planning. Users converse with a database-backed AI agent that generates a structured Agile roadmap (JSON schema), which can then be committed directly to the database in a single transaction. The platform calculates fractional story points based on subtask completion to render precise, staircase-free burndown charts using Chart.js.",
+    "deliverables": [
+      "Structured AI output validation using laravel/ai JsonSchema contracts",
+      "Fractional story point burndown charts with Alpine.js & Chart.js integration",
+      "Headless authentication with WebAuthn (Passkeys) and 2FA via Laravel Fortify"
+    ],
+    "projectUrl": "https://github.com/mah-creator/smart-task"
   },
   {
-    "id": "lumina-metrics",
-    "title": "Lumina Analytics Suite",
-    "subtitle": "Real-time performance and loading statistics dashboard.",
-    "category": "Data Visualization",
-    "tags": ["TypeScript", "SVG Graphs", "Performance", "CSS Grids"],
-    "imageUrl": "/assets/projects/lumina.webp",
-    "description": "A dashboard displaying critical web runtime performance metrics. Built with absolute focus on raw loading performance and clean, decoupled data-components, the suite renders real-time rendering statistics, asset load budgets, and server-side connection speeds with custom SVG timelines.",
-    "deliverables": [
-      "Responsive 60 FPS charts drawn with custom React vector logic",
-      "Lightweight bundle footprint under 25KB total transfer size",
-      "Robust data fallbacks resolving network disconnect scenarios"
+    "id": "booking",
+    "title": "HealthcareBookings API",
+    "subtitle": "High-performance medical scheduling and clinic management backend API.",
+    "category": "Backend API",
+    "tags": ["C#", ".NET 9.0", "EF Core 9.0", "CQRS", "MediatR", "FluentValidation", "PostgreSQL"],
+    "images": [
+      "/projects/booking/api.PNG"
     ],
-    "projectUrl": "https://lumina.luxuryui.dev"
+    "description": "HealthcareBookings is a scheduling and clinic discovery API designed around Clean Architecture and CQRS principles. It implements atomic rescheduling with database savepoints (ensuring transactional safety against double-booking) and geolocation clinic search using the Haversine formula. It features stateful JWT token validation with active session revocation (immediate server-side invalidation on logout).",
+    "deliverables": [
+      "Clean Architecture & CQRS pattern orchestrations via MediatR handlers",
+      "Atomic rescheduling transactions using EF Core Database Savepoints",
+      "Stateful JWT logout middleware interceptor validating active tokens in DB"
+    ],
+    "projectUrl": "https://github.com/mah-creator/HealthcareBookings"
+  },
+  {
+    "id": "client-portal",
+    "title": "ClientPortal Workspace",
+    "subtitle": "Secure role-based workspace bridging freelancers and clients with real-time sync.",
+    "category": "Full-Stack Web App",
+    "tags": ["React", "TypeScript", ".NET 9.0", "SignalR", "SQLite", "Tailwind CSS", "shadcn/ui"],
+    "images": [
+      "/projects/client-portal/login.png",
+      "/projects/client-portal/f_dash.png",
+      "/projects/client-portal/f_newprj.png",
+      "/projects/client-portal/f_invite.png",
+      "/projects/client-portal/c_dash.png",
+      "/projects/client-portal/c_prj_page.png",
+      "/projects/client-portal/c_prj_files.png",
+      "/projects/client-portal/c_prj_upld_file.png",
+      "/projects/client-portal/c_prj_w_cmnts.png",
+      "/projects/client-portal/api.PNG"
+    ],
+    "description": "ClientPortal is a decoupled single-page workspace for freelancers and clients to streamline project execution, task management, and asset delivery. Features role-based workspaces for Admins, Freelancers, and Customers. Integrates real-time SignalR notifications for progress tracking and task status shifts, and provides a secure file uploads registry with GUID-based filename obfuscation.",
+    "deliverables": [
+      "Bi-directional real-time communication via ASP.NET SignalR Hubs",
+      "Secure GUID-hashed file upload pipeline and localized storage system",
+      "Role-based React routing checks avoiding flash frames or flickering on reload"
+    ],
+    "projectUrl": "https://github.com/mah-creator/Client-Portal-Web-App"
+  },
+  {
+    "id": "devlog",
+    "title": "WriteAI Co-Pilot",
+    "subtitle": "Blogging platform with streaming AI editor integration and semantic search.",
+    "category": "AI Content Platform",
+    "tags": ["Laravel v13.7", "PHP 8.4", "laravel/ai SDK", "Tailwind CSS v4", "Pusher", "Alpine.js"],
+    "images": [
+      "/projects/devlog/landing.png",
+      "/projects/devlog/login.png",
+      "/projects/devlog/author_dashboard.png",
+      "/projects/devlog/author_post_list.png",
+      "/projects/devlog/author_new_post.png",
+      "/projects/devlog/admin_dashboard_users_management.png",
+      "/projects/devlog/admin_dashboard_role_management.png"
+    ],
+    "description": "WriteAI (DevLog) is a blogging and publishing engine enhanced with agentic AI writing capabilities. Features a stateful AI co-pilot streaming XML-like tags (<title>, <write>, <rewrite>, <replace>) into the Markdown editor via a JS fetch delta-parser. Implements automatic SEO metadata extraction, cross-driver hybrid vector search with relational SQL fallback, and multi-tenant Eloquent scopes for writers.",
+    "deliverables": [
+      "Delta-aware streaming parser supporting malformed XML chunks in the editor",
+      "Dynamic database-independent vector search wrapper (MySQL/PostgreSQL)",
+      "Contextual multi-tenant global scopes protecting queued console workers"
+    ],
+    "projectUrl": "https://github.com/mah-creator/elancer-write-ai-project"
+  },
+  {
+    "id": "shaghalni",
+    "title": "Shaghal Recruitment",
+    "subtitle": "AI-enhanced recruitment platform and job board with dual-portal analytics.",
+    "category": "Job Board Platform",
+    "tags": ["Laravel 12", "PHP 8.2", "MariaDB", "OpenAI API", "Cloudflare R2", "Pest PHP"],
+    "images": [
+      "/projects/shaghalni/vacancy_list.png",
+      "/projects/shaghalni/vacancy_page.png",
+      "/projects/shaghalni/vacancy_application_page.png",
+      "/projects/shaghalni/admin_dashboard.png",
+      "/projects/shaghalni/admin_vacancy_list.png",
+      "/projects/shaghalni/admin_application_list.png",
+      "/projects/shaghalni/admin_users_list.png"
+    ],
+    "description": "Shaghal is a monorepo job board platform containing a client-facing portal (job-app) and a backoffice dashboard (job-backoffice) sharing a DRY Eloquent data layer packaged as a local Composer library. Features automated resume parsing and matching scores via OpenAI, stateless cloud storage integration using Cloudflare R2, and real-time dashboard analytics like job conversion rates.",
+    "deliverables": [
+      "Shared-package monorepo architecture loaded via local Composer path mapping",
+      "OpenAI Suitability Score analysis and PDF file extraction services",
+      "State-free cloud file pipeline utilizing S3-compatible R2 storage"
+    ],
+    "projectUrl": "https://github.com/mah-creator/job-board"
   }
 ]

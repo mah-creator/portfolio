@@ -1,26 +1,29 @@
 [
   {
-    "category": "Interface Development",
+    "category": "Backend & Databases",
     "items": [
-      { "name": "React.js", "level": 95 },
-      { "name": "TypeScript", "level": 90 },
-      { "name": "HTML5 / Canvas", "level": 85 }
+      { "name": "Laravel (PHP)", "level": 95 },
+      { "name": "ASP.NET Core", "level": 90 },
+      { "name": "PostgreSQL & MySQL", "level": 88 },
+      { "name": "EF Core & Eloquent ORM", "level": 90 }
     ]
   },
   {
-    "category": "Visuals & Design",
+    "category": "Frontend & Systems",
     "items": [
-      { "name": "Tailwind CSS", "level": 95 },
-      { "name": "Luxury Typography", "level": 90 },
-      { "name": "Motion & Animation", "level": 85 }
+      { "name": "HTML5 / CSS3 / JavaScript", "level": 85 },
+      { "name": "Tailwind CSS", "level": 90 },
+      { "name": "Cloud (Laravel Cloud, AWS)", "level": 80 },
+      { "name": "Git & Development Tooling", "level": 88 }
     ]
   },
   {
-    "category": "Engineering & Ops",
+    "category": "Architecture & Design",
     "items": [
-      { "name": "Static Web Hosting", "level": 90 },
-      { "name": "Performance Budgets", "level": 95 },
-      { "name": "Unit Testing", "level": 85 }
+      { "name": "RESTful API Integration", "level": 92 },
+      { "name": "Design Patterns & OOP", "level": 88 },
+      { "name": "Real-Time (SignalR, Pusher)", "level": 82 },
+      { "name": "Data Structures & Algorithms", "level": 85 }
     ]
   }
 ]

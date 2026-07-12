@@ -68,3 +68,17 @@ Verify that the compiler and static builder compile without warnings.
 - **Expected Outcome**:
   - Static distribution assets are generated under the `dist/` folder.
   - Zero warnings or compile warnings are present in stdout.
+
+### Scenario 5: Sliding Gallery (Carousel) Functionality Check
+
+Verify that the project card image carousel functions correctly, changes images on click, and does not trigger the details modal opening on slide interaction.
+
+- **Action**:
+  - Hover over a project card in the grid to reveal left/right navigation arrows.
+  - Click on the right navigation arrow to advance the slide, or click on a specific indicator dot.
+  - Click outside the arrows/dots on the text part of the card or the main body of the card.
+- **Expected Outcome**:
+  - Clicking on the left/right arrows or dots transitions the image to the next/selected project snapshot.
+  - The project details modal overlay does **NOT** open when arrows/dots are clicked (event propagation is successfully stopped).
+  - Clicking on the body of the card opens the details modal overlay showing the project's details and a copy of the sliding gallery.
+  - Verification that swipe gestures work on touch devices.

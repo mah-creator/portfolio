@@ -110,6 +110,19 @@
 
 ---
 
+## Phase 7: Sliding Gallery & Multi-Project Integration
+
+**Purpose**: Integrate the 5 real showcase projects and implement the image sliding gallery (carousel) within project cards and details modal
+
+- [x] T024 Copy project snapshots from `Project images and context/` to `public/projects/[project_id]/`
+- [x] T025 Update typescript types in `src/models/types.ts` changing `imageUrl: string` to `images: string[]`
+- [x] T026 Parse and populate projects data in `src/data/projects.json` with the 5 real projects (TaskMind, HealthcareBookings, ClientPortal, WriteAI, Shaghal) using context summaries from `CONTEXT.md`
+- [x] T027 Refactor `src/components/ProjectCard.tsx` to build a custom sliding gallery carousel with manual left/right arrow navigation, index indicator dots, stop propagation click handlers, and transition effects
+- [x] T028 Update `src/components/ProjectModal.tsx` to support the multi-image sliding gallery in the details overlay view
+- [x] T029 Perform verification checks (Scenario 5) to ensure slide navigation works on mobile, tablet, desktop, and does not trigger details modal activation
+
+---
+
 ## Dependencies & Execution Order
 
 ### Phase Dependencies
@@ -120,20 +133,22 @@
 - **User Story 2 (Phase 4)**: Depends on User Story 1 (Phase 3) for the clickable cards trigger.
 - **User Story 3 (Phase 5)**: Depends on Foundational (Phase 2) - can run in parallel with User Story 1 and 2 if needed.
 - **Polish (Phase 6)**: Depends on completing all features.
+- **Sliding Gallery & Multi-Project Integration (Phase 7)**: Depends on Polish (Phase 6) as an extension/refinement of the baseline portfolio.
 
 ### Parallel Opportunities
 
-- Task [T003] can run in parallel with project setup task [T002].
-- Tasks [T008] and [T010] under User Story 1 can run in parallel.
-- Experience Timeline [T017] and SkillsGrid [T018] can be written in parallel.
+- Task [T024] (copying image assets) can run in parallel with task [T025] (type definition updates).
+- Task [T026] (project content updates) can be started once types are defined.
 
 ---
 
 ## Implementation Strategy
 
-### MVP First (User Story 1 Only)
+### Sliding Gallery & Multi-Project Iteration
 
-1. Complete Setup and Foundational tasks (T001 to T007).
-2. Complete landing page and cards rendering (T008 to T012).
-3. Confirm User Story 1 functions perfectly and has correct luxury aesthetics.
-4. Integrate detail overlay and resume systems incrementally.
+1. Organize and copy all snapshot image assets to `public/projects/`.
+2. Refactor type definitions and JSON database records to support the new `images` array schema.
+3. Build the custom React Carousel slider logic and UI layout inside `ProjectCard.tsx`.
+4. Ensure event bubblings are correctly halted on arrow clicks to avoid overlapping modal overlay triggers.
+5. Implement matching carousel gallery components inside `ProjectModal.tsx`.
+6. Run VITEST and build steps to ensure compilation cleanliness.
