@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import profileData from '../data/profile.json'
 import type { Profile } from '../models/types'
 import { Github, Linkedin, Mail, FileText } from 'lucide-react'
@@ -16,6 +16,20 @@ const WhatsAppIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const Hero: React.FC = () => {
   const profile: Profile = profileData
+  const [isOpen, setIsOpen] = useState(false)
+  const contactRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: PointerEvent) => {
+      if (contactRef.current && !contactRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener('pointerdown', handleClickOutside)
+    return () => {
+      document.removeEventListener('pointerdown', handleClickOutside)
+    }
+  }, [])
 
   return (
     <section className="relative overflow-hidden pt-24 pb-16 px-6 border-b border-slate-900 bg-obsidian">
@@ -44,15 +58,28 @@ export const Hero: React.FC = () => {
 
         {/* Buttons / Actions */}
         <div className="flex flex-wrap justify-center gap-4">
-          <div className="relative group w-[180px] h-[46px]">
-            {/* Main "Contact Me" Button (shows by default, fades out/shrinks on hover) */}
-            <div className="absolute inset-0 flex items-center justify-center gap-2 bg-gold-brushed/10 group-hover:bg-gold-brushed/20 border border-gold-brushed/30 group-hover:border-transparent rounded text-gold-brushed text-sm tracking-wider uppercase font-semibold transition-all duration-300 shadow-[0_0_10px_rgba(212,175,55,0.05)] group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none cursor-pointer">
+          <div
+            ref={contactRef}
+            onMouseLeave={() => setIsOpen(false)}
+            className="relative group w-[180px] h-[46px]"
+          >
+            {/* Main "Contact Me" Button (shows by default, fades out/shrinks on hover or when opened) */}
+            <button
+              type="button"
+              onClick={() => setIsOpen(!isOpen)}
+              className={`absolute inset-0 flex items-center justify-center gap-2 bg-gold-brushed/10 group-hover:bg-gold-brushed/20 border border-gold-brushed/30 group-hover:border-transparent rounded text-gold-brushed text-sm tracking-wider uppercase font-semibold transition-all duration-300 shadow-[0_0_10px_rgba(212,175,55,0.05)] group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none cursor-pointer w-full h-full
+                ${isOpen ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-100 scale-100 pointer-events-auto'}`}
+            >
               <Mail size={16} />
               Contact Me
-            </div>
+            </button>
 
-            {/* Split sub-buttons (invisible/scaled down by default, shows on hover) */}
-            <div className="absolute inset-0 flex items-center opacity-0 scale-95 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-300 gap-2">
+            {/* Split sub-buttons (invisible/scaled down by default, shows on hover or when opened) */}
+            <div
+              className={`absolute inset-0 flex items-center transition-all duration-300 gap-2
+                ${isOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}
+                group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto`}
+            >
               {/* LinkedIn */}
               <a
                 href={profile.linkedinUrl}
