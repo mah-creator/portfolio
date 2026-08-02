@@ -1,4 +1,7 @@
+Project\ images\ and\ context/*
+
 # Logs
+
 logs
 *.log
 npm-debug.log*
