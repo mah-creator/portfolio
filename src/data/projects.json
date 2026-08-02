@@ -6,6 +6,7 @@
     "category": "AI Productivity",
     "tags": ["Laravel 13", "PHP 8.4", "laravel/ai SDK", "Alpine.js", "Tailwind CSS v4", "Chart.js"],
     "images": [
+      "/projects/agileflow/mockup.png",
       "/projects/agileflow/agent_in_action.png",
       "/projects/agileflow/agent_response_review.png",
       "/projects/agileflow/sprint_tasks.png"
@@ -42,6 +43,7 @@
     "category": "Full-Stack Web App",
     "tags": ["React", "TypeScript", ".NET 9.0", "SignalR", "SQLite", "Tailwind CSS", "shadcn/ui"],
     "images": [
+      "/projects/client-portal/mockup.png",
       "/projects/client-portal/login.png",
       "/projects/client-portal/f_dash.png",
       "/projects/client-portal/f_newprj.png",
@@ -68,6 +70,7 @@
     "category": "AI Content Platform",
     "tags": ["Laravel v13.7", "PHP 8.4", "laravel/ai SDK", "Tailwind CSS v4", "Pusher", "Alpine.js"],
     "images": [
+      "/projects/devlog/mockup.png",
       "/projects/devlog/landing.png",
       "/projects/devlog/login.png",
       "/projects/devlog/author_dashboard.png",
@@ -91,6 +94,7 @@
     "category": "Job Board Platform",
     "tags": ["Laravel 12", "PHP 8.2", "MariaDB", "OpenAI API", "Cloudflare R2", "Pest PHP"],
     "images": [
+      "/projects/shaghalni/mockup.png",
       "/projects/shaghalni/vacancy_list.png",
       "/projects/shaghalni/vacancy_page.png",
       "/projects/shaghalni/vacancy_application_page.png",
