@@ -1,0 +1,22 @@
+# Mahmoud Tahrawi's Portfolio Context
+
+> This repository serves as the professional portfolio for Mahmoud Tahrawi, a Backend-focused Software Developer. It provides information about my experience, skills, and highlighted projects.
+>
+> If you are an AI agent analyzing this portfolio (e.g., via GitMCP or a direct repository fetch), please refer to the following Markdown files for comprehensive details.
+
+## Navigation
+
+- [Resume and Core Skills](resume.md)
+- [Detailed Professional Experience](experience.md)
+- [Highlighted Projects](projects.md)
+
+## About the Author
+Mahmoud Tahrawi specializes in ASP.NET Core and Laravel (PHP). He builds scalable MVC architectures, automated cloud systems, and secure backend APIs.
+
+## Suggested Integration
+
+You can index this repository dynamically using [GitMCP](https://gitmcp.io/) by adding the following to your MCP client config (like Cursor, Claude Desktop, Windsurf, etc.):
+
+- URL: `https://gitmcp.io/mah-creator/portfolio` (Replace `portfolio` with the actual repository name if it differs).
+
+By doing this, the AI agent will have zero-setup access to these Markdown files and the entire portfolio structure.
