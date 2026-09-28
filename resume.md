@@ -1,15 +1,15 @@
 # Mahmoud Tahrawi
 
-**Backend-focused Software Developer**
+**Backend & Automation Engineer**
 
-Engineering reliable backend solutions, scalable MVC architectures, and automated cloud systems.
+Engineering reliable web applications, scalable MVC architectures, and automated business workflows.
 
-- **Email:** drivemah.tah@gmail.com
+- **Email:** info@mahmoud-tahrawi.dev
 - **GitHub:** [mah-creator](https://github.com/mah-creator)
 - **LinkedIn:** [mahmoud-tahrawi](https://www.linkedin.com/in/mahmoud-tahrawi/)
 
 ## Bio
-I am a Backend-focused Software Developer specializing in ASP.NET Core and Laravel (PHP). I have hands-on experience building, deploying, and maintaining production-ready web applications with a strong focus on secure APIs, database optimization, and cloud deployments.
+Backend & Automation Engineer with hands-on experience building, deploying, and maintaining production-ready web applications using ASP.NET Core and Laravel (PHP), and business workflow automation with n8n and Microsoft Power Platform. Strong background in MVC architectures, RESTful APIs, authentication and authorization systems, and database-driven business logic, backed by a computer engineering foundation and practical networking and infrastructure experience. Eager to contribute to engineering teams building reliable, maintainable solutions.
 
 ## Core Skills
 
@@ -18,6 +18,12 @@ I am a Backend-focused Software Developer specializing in ASP.NET Core and Larav
 - ASP.NET Core (90%)
 - PostgreSQL & MySQL (88%)
 - EF Core & Eloquent ORM (90%)
+
+### Automation & Integrations
+- n8n Workflow Automation (90%)
+- Microsoft Power Platform (85%)
+- AI Integrations (OpenAI, LangChain) (85%)
+- WhatsApp Integration (WAHA) (88%)
 
 ### Frontend & Systems
 - HTML5 / CSS3 / JavaScript (85%)
@@ -32,7 +38,7 @@ I am a Backend-focused Software Developer specializing in ASP.NET Core and Larav
 - Data Structures & Algorithms (85%)
 
 ## Experience Overview
-- **UCASTI Elancer** - Trainee (Laravel Track) (Apr 2026 - Jan 2027)
+- **Elancer, UCASTI** - Trainee (Apr 2026 - Present)
 - **UNRWA** - Microsoft Power Platform Intern (Mar 2025 - May 2025)
 
 For more details on my experience, please see [experience.md](./experience.md).

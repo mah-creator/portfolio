@@ -9,6 +9,15 @@
     ]
   },
   {
+    "category": "Automation & Integrations",
+    "items": [
+      { "name": "n8n Workflow Automation", "level": 90 },
+      { "name": "Microsoft Power Platform", "level": 85 },
+      { "name": "AI Integrations (OpenAI, LangChain)", "level": 85 },
+      { "name": "WhatsApp Integration (WAHA)", "level": 88 }
+    ]
+  },
+  {
     "category": "Frontend & Systems",
     "items": [
       { "name": "HTML5 / CSS3 / JavaScript", "level": 85 },

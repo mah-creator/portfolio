@@ -1,14 +1,13 @@
 [
   {
     "id": "exp-ucasti",
-    "company": "UCASTI Elancer",
-    "role": "Trainee (Laravel Track)",
+    "company": "Elancer, UCASTI",
+    "role": "Trainee",
     "location": "Gaza, Palestine",
-    "period": "Apr 2026 - Jan 2027",
+    "period": "Apr 2026 - Present",
     "achievements": [
-      "Mastered advanced Laravel architecture, database optimization, and secure coding practices.",
-      "Gained hands-on experience working on production-ready applications under direct professional supervision.",
-      "Designed and implemented complex backend systems using Laravel 12, Eloquent ORM, and Blade templates."
+      "Developing a real-world Laravel project under the direct supervision of Eng. Mohammed Safidi, covering advanced Laravel topics.",
+      "Training in professional freelancing: finding and securing work on freelance platforms and through social media."
     ]
   },
   {
@@ -18,9 +17,9 @@
     "location": "Gaza, Palestine",
     "period": "Mar 2025 - May 2025",
     "achievements": [
-      "Automated internal organizational workflows and developed data-driven business applications using Power Apps and Power Automate.",
-      "Collaborated with a technical engineering team to design and deliver low-code solutions for internal operations.",
-      "Integrated various Microsoft services to enhance data accessibility, reporting, and operational efficiency."
+      "Worked on automating workflows and creating data-driven applications using Power Apps and Power Automate.",
+      "Collaborated with a technical team to design low-code solutions for internal operations.",
+      "Assisted in integrating Microsoft services to improve data accessibility and reporting."
     ]
   }
 ]

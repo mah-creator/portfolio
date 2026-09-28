@@ -1,9 +1,9 @@
 {
   "name": "Mahmoud Tahrawi",
-  "title": "Backend-focused Software Developer",
-  "subtitle": "Engineering reliable backend solutions, scalable MVC architectures, and automated cloud systems.",
-  "bio": "I am a Backend-focused Software Developer specializing in ASP.NET Core and Laravel (PHP). I have hands-on experience building, deploying, and maintaining production-ready web applications with a strong focus on secure APIs, database optimization, and cloud deployments.",
-  "email": "drivemah.tah@gmail.com",
+  "title": "Backend & Automation Engineer",
+  "subtitle": "Engineering reliable web applications, scalable MVC architectures, and automated business workflows.",
+  "bio": "Backend & Automation Engineer with hands-on experience building, deploying, and maintaining production-ready web applications using ASP.NET Core and Laravel (PHP), and business workflow automation with n8n and Microsoft Power Platform. Strong background in MVC architectures, RESTful APIs, authentication and authorization systems, and database-driven business logic, backed by a computer engineering foundation and practical networking and infrastructure experience. Eager to contribute to engineering teams building reliable, maintainable solutions.",
+  "email": "info@mahmoud-tahrawi.dev",
   "githubUrl": "https://github.com/mah-creator",
   "linkedinUrl": "https://www.linkedin.com/in/mahmoud-tahrawi/",
   "resumeUrl": "/resume.pdf"
