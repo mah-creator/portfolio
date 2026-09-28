@@ -1,5 +1,50 @@
 # Projects
 
+## WhatsApp Order Automation
+**A 30-node n8n pipeline automating restaurant orders via WhatsApp.**
+*Category: Workflow Automation*
+**Tech Stack:** n8n, LangChain, OpenAI API, WAHA, Railway, State Machine
+[View on GitHub](#)
+
+A 30-node n8n pipeline that turns customer WhatsApp messages into tracked orders, using a LangChain Information Extractor to structure free-text requests and an order state machine to follow each order through to delivery. Staff confirm orders and assign drivers through commands restricted to an authorized sender, while the kitchen is notified in a WhatsApp group. Messages are sent through a self-hosted WAHA gateway on Railway.
+
+**Key Deliverables:**
+- State machine order tracking bridging multi-actor workflows
+- LangChain Information Extractor converting free-text to structured orders
+- Self-hosted WAHA gateway on Railway for seamless WhatsApp integration
+
+---
+
+## Applicant Tracking System
+**A Microsoft Power Platform solution matching CVs to job descriptions.**
+*Category: Enterprise Automation*
+**Tech Stack:** Power Apps, Power Automate, Dataverse, Microsoft Lists, Low-code
+[View on GitHub](#)
+
+An enterprise-grade Applicant Tracking System built on the Microsoft Power Platform. It matches candidate CVs against job descriptions to streamline the hiring pipeline. Power Automate flows triggered from Microsoft Lists drive the matching process and update structured candidate data directly within Dataverse.
+
+**Key Deliverables:**
+- Automated CV screening and matching workflows via Power Automate
+- Custom candidate management dashboards designed with Power Apps
+- Enterprise relational data modeling utilizing Microsoft Dataverse
+
+---
+
+## Enterprise Network Lab
+**Network infrastructure and virtualization lab with VLANs, firewalls, and VMs.**
+*Category: Infrastructure & Ops*
+**Tech Stack:** Fortinet, Cisco, VLANs, Hyper-V, VMware, Linux, Windows Server
+[View on GitHub](#)
+
+A comprehensive network engineering and infrastructure lab involving PoE Layer 2 / Layer 3 switch configuration (VLANs, subnetting) via CLI and web interface, Fortinet firewall policies, Wi-Fi access points, structured cabling, and UPS administration. It includes a robust virtualization environment running Windows Server, Linux, and Windows client VMs across Hyper-V and VMware Workstation.
+
+**Key Deliverables:**
+- Layer 2/3 switch configuration and secure inter-VLAN routing
+- Fortinet firewall policy implementation and network security administration
+- Hypervisor provisioning for multi-tenant and cross-platform OS environments
+
+---
+
 ## TaskMind
 **AI-powered Agile productivity tool and collaborative task management planner.**
 *Category: AI Productivity*
