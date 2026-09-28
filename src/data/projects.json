@@ -1,64 +1,17 @@
 [
   {
-    "id": "n8n-automation",
-    "title": "WhatsApp Order Automation",
-    "subtitle": "A 30-node n8n pipeline automating restaurant orders via WhatsApp.",
-    "category": "Workflow Automation",
-    "tags": ["n8n", "LangChain", "OpenAI API", "WAHA", "Railway", "State Machine"],
-    "images": [
-      "/projects/n8n/main_flow.webp"
-    ],
-    "description": "A 30-node n8n pipeline that turns customer WhatsApp messages into tracked orders, using a LangChain Information Extractor to structure free-text requests and an order state machine to follow each order through to delivery. Staff confirm orders and assign drivers through commands restricted to an authorized sender, while the kitchen is notified in a WhatsApp group. Messages are sent through a self-hosted WAHA gateway on Railway.",
-    "deliverables": [
-      "State machine order tracking bridging multi-actor workflows",
-      "LangChain Information Extractor converting free-text to structured orders",
-      "Self-hosted WAHA gateway on Railway for seamless WhatsApp integration"
-    ],
-    "projectUrl": ""
-  },
-  {
-    "id": "ats-powerplatform",
-    "title": "Applicant Tracking System",
-    "subtitle": "A Microsoft Power Platform solution matching CVs to job descriptions.",
-    "category": "Enterprise Automation",
-    "tags": ["Power Apps", "Power Automate", "Dataverse", "Microsoft Lists", "Low-code"],
-    "images": [
-      "/projects/ats/ats_image_2.webp",
-      "/projects/ats/ats_image_3.webp",
-      "/projects/ats/ats_image_4.webp",
-      "/projects/ats/ats_image_5.webp"
-    ],
-    "description": "An enterprise-grade Applicant Tracking System built on the Microsoft Power Platform. It matches candidate CVs against job descriptions to streamline the hiring pipeline. Power Automate flows triggered from Microsoft Lists drive the matching process and update structured candidate data directly within Dataverse.",
-    "deliverables": [
-      "Automated CV screening and matching workflows via Power Automate",
-      "Custom candidate management dashboards designed with Power Apps",
-      "Enterprise relational data modeling utilizing Microsoft Dataverse"
-    ],
-    "projectUrl": ""
-  },
-  {
-    "id": "enterprise-network",
-    "title": "Enterprise Network Lab",
-    "subtitle": "Network infrastructure and virtualization lab with VLANs, firewalls, and VMs.",
-    "category": "Infrastructure & Ops",
-    "tags": ["Fortinet", "Cisco", "VLANs", "Hyper-V", "VMware", "Linux", "Windows Server"],
-    "images": [
-      "/projects/network/network_lab.jpg"
-    ],
-    "description": "A comprehensive network engineering and infrastructure lab involving PoE Layer 2 / Layer 3 switch configuration (VLANs, subnetting) via CLI and web interface, Fortinet firewall policies, Wi-Fi access points, structured cabling, and UPS administration. It includes a robust virtualization environment running Windows Server, Linux, and Windows client VMs across Hyper-V and VMware Workstation.",
-    "deliverables": [
-      "Layer 2/3 switch configuration and secure inter-VLAN routing",
-      "Fortinet firewall policy implementation and network security administration",
-      "Hypervisor provisioning for multi-tenant and cross-platform OS environments"
-    ],
-    "projectUrl": ""
-  },
-  {
     "id": "agileflow",
     "title": "TaskMind",
     "subtitle": "AI-powered Agile productivity tool and collaborative task management planner.",
     "category": "AI Productivity",
-    "tags": ["Laravel 13", "PHP 8.4", "laravel/ai SDK", "Alpine.js", "Tailwind CSS v4", "Chart.js"],
+    "tags": [
+      "Laravel 13",
+      "PHP 8.4",
+      "laravel/ai SDK",
+      "Alpine.js",
+      "Tailwind CSS v4",
+      "Chart.js"
+    ],
     "images": [
       "/projects/agileflow/mockup.png",
       "/projects/agileflow/agent_in_action.png",
@@ -74,28 +27,19 @@
     "projectUrl": "https://github.com/mah-creator/smart-task"
   },
   {
-    "id": "booking",
-    "title": "HealthcareBookings API",
-    "subtitle": "High-performance medical scheduling and clinic management backend API.",
-    "category": "Backend API",
-    "tags": ["C#", ".NET 9.0", "EF Core 9.0", "CQRS", "MediatR", "FluentValidation", "PostgreSQL"],
-    "images": [
-      "/projects/booking/api.PNG"
-    ],
-    "description": "HealthcareBookings is a scheduling and clinic discovery API designed around Clean Architecture and CQRS principles. It implements atomic rescheduling with database savepoints (ensuring transactional safety against double-booking) and geolocation clinic search using the Haversine formula. It features stateful JWT token validation with active session revocation (immediate server-side invalidation on logout).",
-    "deliverables": [
-      "Clean Architecture & CQRS pattern orchestrations via MediatR handlers",
-      "Atomic rescheduling transactions using EF Core Database Savepoints",
-      "Stateful JWT logout middleware interceptor validating active tokens in DB"
-    ],
-    "projectUrl": "https://github.com/mah-creator/HealthcareBookings"
-  },
-  {
     "id": "client-portal",
     "title": "ClientPortal Workspace",
     "subtitle": "Secure role-based workspace bridging freelancers and clients with real-time sync.",
     "category": "Full-Stack Web App",
-    "tags": ["React", "TypeScript", ".NET 9.0", "SignalR", "SQLite", "Tailwind CSS", "shadcn/ui"],
+    "tags": [
+      "React",
+      "TypeScript",
+      ".NET 9.0",
+      "SignalR",
+      "SQLite",
+      "Tailwind CSS",
+      "shadcn/ui"
+    ],
     "images": [
       "/projects/client-portal/mockup.png",
       "/projects/client-portal/login.png",
@@ -118,11 +62,42 @@
     "projectUrl": "https://github.com/mah-creator/Client-Portal-Web-App"
   },
   {
+    "id": "n8n-automation",
+    "title": "WhatsApp Order Automation",
+    "subtitle": "A 30-node n8n pipeline automating restaurant orders via WhatsApp.",
+    "category": "Workflow Automation",
+    "tags": [
+      "n8n",
+      "LangChain",
+      "OpenAI API",
+      "WAHA",
+      "Railway",
+      "State Machine"
+    ],
+    "images": [
+      "/projects/n8n/main_flow.webp"
+    ],
+    "description": "A 30-node n8n pipeline that turns customer WhatsApp messages into tracked orders, using a LangChain Information Extractor to structure free-text requests and an order state machine to follow each order through to delivery. Staff confirm orders and assign drivers through commands restricted to an authorized sender, while the kitchen is notified in a WhatsApp group. Messages are sent through a self-hosted WAHA gateway on Railway.",
+    "deliverables": [
+      "State machine order tracking bridging multi-actor workflows",
+      "LangChain Information Extractor converting free-text to structured orders",
+      "Self-hosted WAHA gateway on Railway for seamless WhatsApp integration"
+    ],
+    "projectUrl": ""
+  },
+  {
     "id": "devlog",
     "title": "WriteAI Co-Pilot",
     "subtitle": "Blogging platform with streaming AI editor integration and semantic search.",
     "category": "AI Content Platform",
-    "tags": ["Laravel v13.7", "PHP 8.4", "laravel/ai SDK", "Tailwind CSS v4", "Pusher", "Alpine.js"],
+    "tags": [
+      "Laravel v13.7",
+      "PHP 8.4",
+      "laravel/ai SDK",
+      "Tailwind CSS v4",
+      "Pusher",
+      "Alpine.js"
+    ],
     "images": [
       "/projects/devlog/mockup.png",
       "/projects/devlog/landing.png",
@@ -146,7 +121,14 @@
     "title": "Shaghal Recruitment",
     "subtitle": "AI-enhanced recruitment platform and job board with dual-portal analytics.",
     "category": "Job Board Platform",
-    "tags": ["Laravel 12", "PHP 8.2", "MariaDB", "OpenAI API", "Cloudflare R2", "Pest PHP"],
+    "tags": [
+      "Laravel 12",
+      "PHP 8.2",
+      "MariaDB",
+      "OpenAI API",
+      "Cloudflare R2",
+      "Pest PHP"
+    ],
     "images": [
       "/projects/shaghalni/mockup.png",
       "/projects/shaghalni/vacancy_list.png",
@@ -164,5 +146,81 @@
       "State-free cloud file pipeline utilizing S3-compatible R2 storage"
     ],
     "projectUrl": "https://github.com/mah-creator/job-board"
+  },
+  {
+    "id": "booking",
+    "title": "HealthcareBookings API",
+    "subtitle": "High-performance medical scheduling and clinic management backend API.",
+    "category": "Backend API",
+    "tags": [
+      "C#",
+      ".NET 9.0",
+      "EF Core 9.0",
+      "CQRS",
+      "MediatR",
+      "FluentValidation",
+      "PostgreSQL"
+    ],
+    "images": [
+      "/projects/booking/api.PNG"
+    ],
+    "description": "HealthcareBookings is a scheduling and clinic discovery API designed around Clean Architecture and CQRS principles. It implements atomic rescheduling with database savepoints (ensuring transactional safety against double-booking) and geolocation clinic search using the Haversine formula. It features stateful JWT token validation with active session revocation (immediate server-side invalidation on logout).",
+    "deliverables": [
+      "Clean Architecture & CQRS pattern orchestrations via MediatR handlers",
+      "Atomic rescheduling transactions using EF Core Database Savepoints",
+      "Stateful JWT logout middleware interceptor validating active tokens in DB"
+    ],
+    "projectUrl": "https://github.com/mah-creator/HealthcareBookings"
+  },
+  {
+    "id": "ats-powerplatform",
+    "title": "Applicant Tracking System",
+    "subtitle": "A Microsoft Power Platform solution matching CVs to job descriptions.",
+    "category": "Enterprise Automation",
+    "tags": [
+      "Power Apps",
+      "Power Automate",
+      "Dataverse",
+      "Microsoft Lists",
+      "Low-code"
+    ],
+    "images": [
+      "/projects/ats/ats_image_2.webp",
+      "/projects/ats/ats_image_3.webp",
+      "/projects/ats/ats_image_4.webp",
+      "/projects/ats/ats_image_5.webp"
+    ],
+    "description": "An enterprise-grade Applicant Tracking System built on the Microsoft Power Platform. It matches candidate CVs against job descriptions to streamline the hiring pipeline. Power Automate flows triggered from Microsoft Lists drive the matching process and update structured candidate data directly within Dataverse.",
+    "deliverables": [
+      "Automated CV screening and matching workflows via Power Automate",
+      "Custom candidate management dashboards designed with Power Apps",
+      "Enterprise relational data modeling utilizing Microsoft Dataverse"
+    ],
+    "projectUrl": ""
+  },
+  {
+    "id": "enterprise-network",
+    "title": "Enterprise Network Lab",
+    "subtitle": "Network infrastructure and virtualization lab with VLANs, firewalls, and VMs.",
+    "category": "Infrastructure & Ops",
+    "tags": [
+      "Fortinet",
+      "Cisco",
+      "VLANs",
+      "Hyper-V",
+      "VMware",
+      "Linux",
+      "Windows Server"
+    ],
+    "images": [
+      "/projects/network/network_lab.jpg"
+    ],
+    "description": "A comprehensive network engineering and infrastructure lab involving PoE Layer 2 / Layer 3 switch configuration (VLANs, subnetting) via CLI and web interface, Fortinet firewall policies, Wi-Fi access points, structured cabling, and UPS administration. It includes a robust virtualization environment running Windows Server, Linux, and Windows client VMs across Hyper-V and VMware Workstation.",
+    "deliverables": [
+      "Layer 2/3 switch configuration and secure inter-VLAN routing",
+      "Fortinet firewall policy implementation and network security administration",
+      "Hypervisor provisioning for multi-tenant and cross-platform OS environments"
+    ],
+    "projectUrl": ""
   }
 ]
