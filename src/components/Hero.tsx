@@ -102,7 +102,7 @@ export const Hero: React.FC = () => {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/+970595428025"
+                href="https://wa.me/970595428027"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="WhatsApp"
